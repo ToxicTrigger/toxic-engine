@@ -1,0 +1,29 @@
+[package]
+name = "toxic-engine"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Renderer
+glium = "*"
+image = "*"
+
+# GUI Edit
+imgui = { version = "*"  }
+clipboard = "*"
+imgui-glium-renderer = "*"
+imgui-winit-support = "*"
+
+# Json
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Game Code
+mlua = { version = "*", features = ["luajit52", "vendored"] }
+
+# DB
+[dependencies.rusqlite]
+version = "*"
+features = ["bundled"]
